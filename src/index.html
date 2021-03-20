@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasło</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <label for="pswd1">Hasło</label><br>
+        <input type="password" id="pswd1" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*])(?=.{8,})"
+               onkeyup="checkPass()"><br>
+        <p id="letter">Min 1 mała litera.</p>
+        <p id="capital">Min 1 duża litera.</p>
+        <p id="special sign">Min 1 znak specjalny.</p>
+        <p id="length">Za krótkie hasło. Min. 8 znaków.</p>
+    </div>
+    <div class="row">
+        <label for="pswd2">Powtórz hasło</label><br>
+        <input type="password" id="pswd2" onkeyup="checkPass()"><br>
+        <p id="repeatMessage">Hasła różnią się od siebie!</p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
